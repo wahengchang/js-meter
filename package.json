@@ -1,0 +1,30 @@
+{
+  "name": "js-meter",
+  "version": "1.0.0",
+  "description": "it is an tool of measuring performance of time, CPU, RAM and heap of javascript code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahengchang/js-meter.git"
+  },
+  "keywords": [
+    "javascript",
+    "test",
+    "performance",
+    "cpu",
+    "ram",
+    "time",
+    "spend",
+    "testing",
+    "speed"
+  ],
+  "author": "wahengchang@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahengchang/js-meter/issues"
+  },
+  "homepage": "https://github.com/wahengchang/js-meter#readme"
+}
