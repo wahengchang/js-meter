@@ -5,9 +5,9 @@ function jsmeter ({isPrint, isMs, isKb}) {
     this.m0 = process.memoryUsage()
     this.c0 = process.cpuUsage()
 
-    this.isPrint = isPrint
-    this.isMs = isMs
-    this.isKb = isKb
+    this.isPrint = isPrint || true
+    this.isMs = isMs || true
+    this.isKb = isKb || true
 }
  
 jsmeter.prototype.stop = function() {

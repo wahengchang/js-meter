@@ -1,6 +1,6 @@
 {
   "name": "js-meter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "it is an tool of measuring performance of time, CPU, RAM and heap of javascript code",
   "main": "index.js",
   "scripts": {
