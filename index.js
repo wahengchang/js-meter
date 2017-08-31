@@ -19,15 +19,17 @@ jsmeter.prototype.stop = function() {
     var mFriction = (this.isKb) ? 1024 : 1048576
     var mUnit = (this.isKb) ? 'kb' : 'mb'
 
-    var tFriction = (this.isMs) ? 1000 : 1000000
+    var tCPUFriction = (this.isMs) ? 1000 : 1000000
+    var tFriction = (this.isMs) ? 1 : 1000
+    
     var tUnit = (this.isMs) ? 'ms' : 's'
 
     var diffRAM = (m1['rss'] - this.m0['rss']) / mFriction
     var diffHeapTotal = (m1['heapTotal'] - this.m0['heapTotal']) / mFriction
     var diffHeapUsed = (m1['heapUsed'] - this.m0['heapUsed']) / mFriction
     var diffExternal = (m1['external'] - this.m0['external']) / mFriction
-    var diffCPU = (diffCPU.user + diffCPU.system) /tFriction
-    var diffTime = (new_time - this.old_time)
+    var diffCPU = (diffCPU.user + diffCPU.system) / tCPUFriction
+    var diffTime = (new_time - this.old_time) / tFriction
 
     if(this.isPrint) {
         console.log('RAM        : ', diffRAM , mUnit)
