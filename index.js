@@ -1,13 +1,13 @@
 
-function jsmeter ({isPrint, isMs, isKb}) {
+function jsmeter ({isPrint = true, isMs = true, isKb = true}) {
     /*_*_*_*_ Init _*_*_*/
     this.old_time = new Date();
     this.m0 = process.memoryUsage()
     this.c0 = process.cpuUsage()
 
-    this.isPrint = isPrint || true
-    this.isMs = isMs || true
-    this.isKb = isKb || true
+    this.isPrint = isPrint
+    this.isMs = isMs
+    this.isKb = isKb
 }
  
 jsmeter.prototype.stop = function() {
