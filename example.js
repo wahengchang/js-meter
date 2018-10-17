@@ -3,9 +3,8 @@ const jm = require('./index.js')
 
 const isPrint = true
 const isMs = true       // or Second
-const isKb = true       // or Mb
 
-const m = new jm({isPrint, isMs, isKb})
+const m = new jm({isPrint, isMs})
 
 for(var i=0; i<10000; i++){
     Math.random()
