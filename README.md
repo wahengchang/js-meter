@@ -1,5 +1,5 @@
-#js-meter
-it is an tool of measuring performance of time, CPU, RAM and heap of javascript code
+# js-meter
+It is an tool of measuring performance of time, CPU, RAM and heap of javascript code
 
 [![NPM](https://nodei.co/npm/js-meter.png?downloads=true&downloadRank=true)](https://www.npmjs.com/package/js-meter)
 
