@@ -16,7 +16,7 @@ function bytesToSize(bytes) {
     var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
     return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
 };
- 
+
 jsmeter.prototype.stop = function() {
     var new_time = new Date();
     var m1 = process.memoryUsage()
@@ -24,7 +24,7 @@ jsmeter.prototype.stop = function() {
     var diffCPU = process.cpuUsage(this.c0)
     var tCPUFriction = (this.isMs) ? 1000 : 1000000
     var tFriction = (this.isMs) ? 1 : 1000
-    
+
     var tUnit = (this.isMs) ? 'ms' : 's'
 
     var diffRAM = bytesToSize(m1['rss'] - this.m0['rss'])
@@ -44,12 +44,13 @@ jsmeter.prototype.stop = function() {
     }
 
     return {
-        diffRAM, 
+        diffRAM,
         diffHeapTotal,
         diffHeapUsed,
         diffExternal,
         diffCPU,
-        diffTime
+        diffTime,
+        tUnit
     }
 }
 
